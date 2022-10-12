@@ -1,11 +1,20 @@
-import Axios from 'axios';
+import Axios from "axios";
 
 export async function getTodos() {
-    const todos = await Axios.get("https://jsonplaceholder.typicode.com/todos");
-    return todos.data;
+  console.log("fetching todos");
+  const todos = await Axios.get("https://jsonplaceholder.typicode.com/todos");
+  return todos.data;
 }
 
 export async function getUsers() {
-    const users = await Axios.get("https://jsonplaceholder.typicode.com/users");
-    return users.data;
+  const users = await Axios.get("https://jsonplaceholder.typicode.com/users");
+  return users.data;
+}
+
+export async function getSpecificUser(id) {
+  console.log("fetching user info" + id);
+  const user = await Axios.get(
+    `https://jsonplaceholder.typicode.com/users/${id}`
+  );
+  return user.data;
 }
