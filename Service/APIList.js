@@ -18,3 +18,10 @@ export async function getSpecificUser(id) {
   );
   return user.data;
 }
+
+export async function getUserTodos(id) {
+  const user = await Axios.get(
+    `https://jsonplaceholder.typicode.com/users/${id}/todos`
+  );
+  return user.data;
+}

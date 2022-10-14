@@ -22,6 +22,7 @@ const DisplayTodos = () => {
     fetchTodos();
   }, []);
 
+  /* QUERIES KEYS EXAMPLE */
   //   const { isLoading, isError, data, error } = useQuery(["todos"], getTodos);
 
   return (
